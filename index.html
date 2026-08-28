@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 / Privacy Policy - AutoHub</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.8;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0B0B14 0%, #15152A 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 {
+            color: #FF6B35;
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #00D4AA;
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #FF6B35;
+            padding-left: 12px;
+        }
+        p { margin: 12px 0; color: #b0b0c0; }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .lang-switch button {
+            background: #1E1E3A;
+            border: 1px solid #FF6B35;
+            color: #FF6B35;
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .lang-switch button.active {
+            background: #FF6B35;
+            color: #fff;
+        }
+        .section { display: block; }
+        .section.hidden { display: none; }
+        ul { margin: 10px 0 10px 20px; color: #b0b0c0; }
+        li { margin: 8px 0; }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #2a2a4a;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button onclick="showSection('zh')" id="btn-zh" class="active">中文</button>
+            <button onclick="showSection('en')" id="btn-en">English</button>
+        </div>
+
+        <!-- 中文隐私政策 -->
+        <div id="section-zh" class="section">
+            <h1>车百科隐私政策</h1>
+            <p style="text-align:center;color:#888;">最后更新：2026年8月28日</p>
+            
+            <h2>一、我们收集的信息</h2>
+            <p>车百科（AutoHub）不收集您的任何个人数据。我们不追踪用户行为，不使用广告追踪，不收集设备标识符。</p>
+            
+            <h2>二、信息使用</h2>
+            <p>由于我们不收集任何数据，因此不存在信息使用问题。</p>
+            
+            <h2>三、数据安全</h2>
+            <p>我们无法泄露不存在的数据。您的隐私安全是我们的首要任务。</p>
+            
+            <h2>四、第三方服务</h2>
+            <p>本应用集成了穿山甲广告SDK（仅工程引用，未初始化），不会向任何第三方分享您的数据。</p>
+            
+            <h2>五、儿童隐私</h2>
+            <p>车百科不面向儿童提供服务，我们不会故意收集儿童的个人信息。</p>
+            
+            <h2>六、您的权利</h2>
+            <p>由于我们不收集任何个人数据，您无需行使删除、更正或导出数据的权利。</p>
+            
+            <h2>七、联系方式</h2>
+            <p>如有疑问，请联系：privacy@autohub.app</p>
+        </div>
+
+        <!-- 英文隐私政策 -->
+        <div id="section-en" class="section hidden">
+            <h1>AutoHub Privacy Policy</h1>
+            <p style="text-align:center;color:#888;">Last updated: August 28, 2026</p>
+            
+            <h2>1. Information We Collect</h2>
+            <p>AutoHub does not collect any of your personal data. We do not track user behavior, do not use ad tracking, and do not collect device identifiers.</p>
+            
+            <h2>2. Use of Information</h2>
+            <p>Since we do not collect any data, there is no issue of information usage.</p>
+            
+            <h2>3. Data Security</h2>
+            <p>We cannot leak data that doesn't exist. Your privacy security is our top priority.</p>
+            
+            <h2>4. Third-Party Services</h2>
+            <p>This app integrates Pangle advertising SDK (for reference only, not initialized) and will not share your data with any third parties.</p>
+            
+            <h2>5. Children's Privacy</h2>
+            <p>AutoHub does not serve children, and we do not knowingly collect personal information from children.</p>
+            
+            <h2>6. Your Rights</h2>
+            <p>Since we do not collect any personal data, you do not need to exercise rights to delete, correct, or export data.</p>
+            
+            <h2>7. Contact</h2>
+            <p>If you have questions, please contact: privacy@autohub.app</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 AutoHub. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(lang) {
+            document.getElementById('section-zh').classList.toggle('hidden', lang !== 'zh');
+            document.getElementById('section-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+        
+        // Auto-detect language
+        const userLang = navigator.language || navigator.userLanguage;
+        showSection(userLang.startsWith('zh') ? 'zh' : 'en');
+    </script>
+</body>
+</html>
